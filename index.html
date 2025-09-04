@@ -375,6 +375,105 @@
 
       <section id="contact">
         <h2>Contact Me</h2>
+
+        <form action="" method="post">
+          <fieldset>
+            <legend>Contact Details</legend>
+
+            <label for="user-name">Name</label>
+            <input name="name" id="user-name" type="text" required />
+
+            <br />
+
+            <label for="user-email">Email</label>
+            <input name="email" id="user-email" type="email" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Message</legend>
+
+            <label for="subject">Subject</label>
+            <select name="subject" id="subject">
+              <option value="feedback">Feedback</option>
+              <option value="support">Support</option>
+              <option selected value="offer">Offer</option>
+              <option value="general">General Enquiry</option>
+            </select>
+
+            <br />
+
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="6"
+              cols="35"
+              placeholder="Enter your message here..."
+              required
+            ></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferences</legend>
+
+            <p>Preferred Contact Method</p>
+            <input
+              name="responseType"
+              value="email"
+              type="radio"
+              id="response-email"
+              checked
+            />
+            <label for="response-email">Email</label>
+
+            <br />
+
+            <input
+              name="responseType"
+              value="phone"
+              type="radio"
+              id="response-phone"
+            />
+            <label for="response-phone"
+              >Phone (indicate contact in message)</label
+            >
+
+            <br />
+
+            <input
+              name="responseType"
+              value="whatsapp"
+              type="radio"
+              id="response-whatsapp"
+            />
+            <label for="response-whatsapp"
+              >WhatsApp (indicate contact in message)</label
+            >
+
+            <p>Subscribe to</p>
+            <input
+              type="checkbox"
+              id="news"
+              name="subscribe"
+              value="newsletter"
+              checked
+            />
+            <label for="news">Newsletter</label>
+
+            <br />
+
+            <input
+              checked
+              type="checkbox"
+              id="offers"
+              name="subscribe"
+              value="offers"
+            />
+            <label for="offers">Special Offers</label>
+          </fieldset>
+
+          <button type="submit">Send Message</button>
+        </form>
       </section>
     </main>
 
