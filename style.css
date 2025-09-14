@@ -1,0 +1,154 @@
+/* Define Global CSS Variables for Colors and Fonts */
+:root {
+  /* A modern blue for main accents */
+  --clr-primary: #132952;
+
+  /* A complementary orange for secondary accents/highlights */
+  --clr-secondary: #f26827;
+
+  /* Deep, soft black for body text and primary backgrounds */
+  --clr-dark: #0a131c;
+
+  /* Very light grey/off-white for background sections */
+  --clr-light: #fefefe;
+
+  /* Pure white for backgrounds or text */
+  --clr-white: #ffffff;
+
+  /* A slightly darker light gray for borders or subtle dividers */
+  --clr-gray-200: #f1f5f8;
+
+  /* Font Families - Chosen to visually match fonts in our AI design */
+  /* For headings: a modern, geometric sans-serif */
+  --ff-heading: "Montserrat", sans-serif;
+
+  /* For body text: a clean, readable sans-serif */
+  --ff-body: "Lato", sans-serif;
+
+  /* Font Sizes (Base - will be adjusted for responsiveness) - Using rem for scalability */
+  --fs-base: 1rem; /* Default font size (16px) */
+  --fs-sm: 0.875rem; /* Small text (14px) */
+  --fs-lg: 1.25rem; /* Larger text (20px) */
+  --fs-xl: 1.5rem; /* H3-ish (24px) */
+  --fs-2xl: 2rem; /* H2-ish (32px) */
+  --fs-3xl: 3rem; /* H1-ish (48px) */
+  --fs-4xl: 4rem; /* Extra large (64px) */
+
+  --fw-extrabold: 900;
+  --fw-bold: 700;
+  --fw-regular: 400;
+  --fw-light: 300;
+
+  /* Spacing (Base - will be adjusted for responsiveness) - Using rem for scalability */
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem; /* 8px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 4rem; /* 64px */
+  --space-2xl: 8rem; /* 128px */
+}
+
+/* Universal Box-Sizing Reset */
+*,
+*::before,
+*::after {
+  /* Ensures padding and border are included in element's total width/height */
+  box-sizing: border-box;
+}
+
+/* Explanation for *::before, *::after: */
+/* Pseudo-elements like `::before` and `::after` (which generate content purely with CSS)
+   also have their own Box Model. Including them in this reset ensures they too behave
+   predictably with `box-sizing: border-box`, preventing unexpected size increases when
+   adding padding or borders to them. */
+
+/* General Margin/Padding Reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles for unordered and ordered lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set default font styles for the entire body */
+body {
+  /* Ensures body takes at least full viewport height, useful for footer positioning */
+  min-height: 100vh;
+
+  /* Improves rendering performance */
+  text-rendering: optimizeSpeed;
+
+  /* Default line height for better readability (unitless) */
+  line-height: 1.5;
+
+  background-color: var(--clr-light);
+
+  color: var(--clr-dark);
+
+  font-family: var(--ff-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-regular);
+}
+
+/* A few common fixes for interactive elements */
+a {
+  /* Removes underlines from links by default */
+  text-decoration: none;
+
+  /* Links inherit color from parent by default */
+  color: inherit;
+}
+
+img,
+picture {
+  /* Ensures images are responsive and don't overflow */
+  max-width: 100%;
+
+  /* Removes extra space below images (prevents common layout quirks) */
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  /* Form elements inherit font from parent, for consistency */
+  font: inherit;
+}
+
+h1 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+  padding: var(--space-md);
+}
+
+h2 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+  padding: var(--space-sm);
+}
