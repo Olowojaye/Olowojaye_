@@ -40,7 +40,7 @@
       />
 
       <nav>
-        <button>
+        <button class="menu-open-btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"
@@ -60,7 +60,7 @@
           </svg>
         </button>
 
-        <button>
+        <button class="menu-close-btn hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"
@@ -79,29 +79,39 @@
           </svg>
         </button>
 
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home">Home</a></li>
+          <li class="nav-item"><a href="#about">About</a></li>
+          <li class="nav-item"><a href="#skills">Skills</a></li>
+          <li class="nav-item"><a href="#projects">Projects</a></li>
+          <li class="nav-item"><a href="#experience">Experience</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section id="home">
-        <div>
+        <div class="hero-text-box">
           <h1>Olowojaye Rufus</h1>
           <p>Software Engineer</p>
           <p>
             Showcasing individuals and businesses to the world with responsive
             and accessible web applications
           </p>
+
+          <div class="action-container">
+            <button class="action-primary">
+              <a href="#projects">View Projects</a>
+            </button>
+            <button class="action-secondary">
+              <a href="#contact">Send Message</a>
+            </button>
+          </div>
         </div>
 
         <img
+          class="headshot"
           src="assets/images/profile-picture.png"
           alt="Olowojaye Rufus' headshot"
         />

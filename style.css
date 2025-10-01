@@ -40,6 +40,7 @@
   --fw-light: 300;
 
   /* Spacing (Base - will be adjusted for responsiveness) - Using rem for scalability */
+  --space-xxs: 0.125rem; /* 2px */
   --space-xs: 0.25rem; /* 4px */
   --space-sm: 0.5rem; /* 8px */
   --space-md: 1rem; /* 16px */
@@ -120,6 +121,10 @@ a {
   color: inherit;
 }
 
+svg {
+  display: block;
+}
+
 img,
 picture {
   /* Ensures images are responsive and don't overflow */
@@ -140,9 +145,9 @@ select {
 h1 {
   font-family: var(--ff-heading);
   font-size: var(--fs-4xl);
+  line-height: normal;
   font-weight: var(--fw-bold);
   color: var(--clr-primary);
-  padding: var(--space-md);
 }
 
 h2 {
@@ -151,4 +156,154 @@ h2 {
   font-weight: var(--fw-bold);
   color: var(--clr-primary);
   padding: var(--space-sm);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm);
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background: none;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  border-radius: var(--space-xs);
+}
+
+.menu-open-btn,
+.menu-close-btn {
+  padding: var(--space-xxs);
+}
+
+.nav-list {
+  position: absolute;
+  display: none;
+}
+
+.nav-item {
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  border-bottom: var(--space-xxs) solid var(--clr-light);
+}
+
+section {
+  padding: var(--space-md);
+}
+
+section#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  background-color: var(--clr-gray-200);
+}
+
+div.hero-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+div.action-container {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.action-primary,
+.action-secondary {
+  padding: var(--space-sm);
+  font-weight: var(--fw-bold);
+}
+
+.action-secondary {
+  background-color: var(--clr-light);
+  color: var(--clr-primary);
+  border: var(--space-xxs) solid var(--clr-primary);
+}
+
+#skills ul,
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: var(--space-md);
+}
+
+#skills ul li {
+  display: flex;
+  align-items: center;
+}
+
+#projects ul li {
+  width: 240px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  align-items: center;
+  gap: var(--space-md);
+  background-color: var(--clr-gray-200);
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: var(--space-sm) var(--space-xl);
+    align-items: center;
+  }
+
+  .menu-open-btn,
+  .menu-close-btn {
+    display: none;
+  }
+
+  .nav-list {
+    position: static;
+    display: flex;
+  }
+
+  .nav-item {
+    background: none;
+    color: var(--clr-primary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-bold);
+  }
+
+  section#home {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  div.hero-text-box {
+    flex-basis: 60%;
+  }
+
+  img.headshot {
+    flex-basis: 40%;
+    min-width: 0;
+  }
+
+  footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
