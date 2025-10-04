@@ -233,7 +233,7 @@
 
         <ul>
           <li>
-            <div>
+            <div class="project-card">
               <video
                 src="assets/videos/project-video-1.mp4"
                 controls="true"
@@ -248,18 +248,20 @@
 
               <h3>🌤️ Smart Weather App</h3>
 
-              <p>
-                Automatically predicts weather from your location and sends
-                timely alerts. Get a daily 5 am forecast and instant
-                notifications before major changes.
-              </p>
+              <div class="project-internal-div">
+                <p>
+                  Automatically predicts weather from your location and sends
+                  timely alerts. Get a daily 5 am forecast and instant
+                  notifications before major changes.
+                </p>
 
-              <a href="#">View Project</a>
+                <a href="#">View Project</a>
+              </div>
             </div>
           </li>
 
           <li>
-            <div>
+            <div class="project-card">
               <img
                 src="assets/images/project-image-1.png"
                 height="135"
@@ -269,17 +271,20 @@
 
               <h3>📺 TV Control App</h3>
 
-              <p>
-                Turn your device into a smart remote. Control channels, volume,
-                and power seamlessly with a clean, responsive interface.
-              </p>
+              <div class="project-internal-div">
+                <p>
+                  Turn your device into a smart remote. Control channels,
+                  volume, and power seamlessly with a clean, responsive
+                  interface.
+                </p>
 
-              <a href="#">View Project</a>
+                <a href="#">View Project</a>
+              </div>
             </div>
           </li>
 
           <li>
-            <div>
+            <div class="project-card">
               <iframe
                 height="135"
                 width="240"
@@ -301,12 +306,15 @@
 
               <h3>🎥 YouTube Video Tracker</h3>
 
-              <p>
-                Track your favorite videos with ease. Get updates, organize
-                playlists, and never miss new uploads from channels you follow.
-              </p>
+              <div class="project-internal-div">
+                <p>
+                  Track your favorite videos with ease. Get updates, organize
+                  playlists, and never miss new uploads from channels you
+                  follow.
+                </p>
 
-              <a href="#">View Project</a>
+                <a href="#">View Project</a>
+              </div>
             </div>
           </li>
         </ul>
@@ -451,60 +459,66 @@
           <fieldset>
             <legend>Preferences</legend>
 
-            <p>Preferred Contact Method</p>
-            <input
-              name="responseType"
-              value="email"
-              type="radio"
-              id="response-email"
-              checked
-            />
-            <label for="response-email">Email</label>
+            <div class="preferences">
+              <div>
+                <p>Preferred Contact Method</p>
+                <input
+                  name="responseType"
+                  value="email"
+                  type="radio"
+                  id="response-email"
+                  checked
+                />
+                <label for="response-email">Email</label>
 
-            <br />
+                <br />
 
-            <input
-              name="responseType"
-              value="phone"
-              type="radio"
-              id="response-phone"
-            />
-            <label for="response-phone"
-              >Phone (indicate contact in message)</label
-            >
+                <input
+                  name="responseType"
+                  value="phone"
+                  type="radio"
+                  id="response-phone"
+                />
+                <label for="response-phone"
+                  >Phone (indicate contact in message)</label
+                >
 
-            <br />
+                <br />
 
-            <input
-              name="responseType"
-              value="whatsapp"
-              type="radio"
-              id="response-whatsapp"
-            />
-            <label for="response-whatsapp"
-              >WhatsApp (indicate contact in message)</label
-            >
+                <input
+                  name="responseType"
+                  value="whatsapp"
+                  type="radio"
+                  id="response-whatsapp"
+                />
+                <label for="response-whatsapp"
+                  >WhatsApp (indicate contact in message)</label
+                >
+              </div>
 
-            <p>Subscribe to</p>
-            <input
-              type="checkbox"
-              id="news"
-              name="subscribe"
-              value="newsletter"
-              checked
-            />
-            <label for="news">Newsletter</label>
+              <div>
+                <p>Subscribe to</p>
+                <input
+                  type="checkbox"
+                  id="news"
+                  name="subscribe"
+                  value="newsletter"
+                  checked
+                />
+                <label for="news">Newsletter</label>
 
-            <br />
+                <br />
 
-            <input
-              checked
-              type="checkbox"
-              id="offers"
-              name="subscribe"
-              value="offers"
-            />
-            <label for="offers">Special Offers</label>
+                <input
+                  checked
+                  type="checkbox"
+                  id="offers"
+                  name="subscribe"
+                  value="offers"
+                />
+                <label for="offers">Special Offers</label>
+              </div>
+            </div>
           </fieldset>
 
           <button type="submit">Send Message</button>

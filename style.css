@@ -18,6 +18,8 @@
   /* A slightly darker light gray for borders or subtle dividers */
   --clr-gray-200: #f1f5f8;
 
+  --clr-gray-400: #a7adb0;
+
   /* Font Families - Chosen to visually match fonts in our AI design */
   /* For headings: a modern, geometric sans-serif */
   --ff-heading: "Montserrat", sans-serif;
@@ -119,6 +121,11 @@ a {
 
   /* Links inherit color from parent by default */
   color: inherit;
+  transition: color 300ms ease-out;
+}
+
+a:hover {
+  color: var(--clr-secondary);
 }
 
 svg {
@@ -193,7 +200,7 @@ button {
 }
 
 section {
-  padding: var(--space-md);
+  padding: var(--space-lg) var(--space-md);
 }
 
 section#home {
@@ -263,6 +270,126 @@ footer div {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  align-items: center;
+  border: 1px solid var(--clr-gray-200);
+  border-radius: var(--space-md);
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 300ms ease-out, box-shadow 300ms ease-in;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .project-internal-div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+  padding: var(--space-md);
+}
+
+.project-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card a {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  border-radius: var(--space-md);
+  padding: var(--space-xs) var(--space-sm);
+  align-self: flex-end;
+  transition: opacity 300ms ease-out;
+}
+
+.project-card a:hover {
+  opacity: 0.8;
+}
+
+#experience table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  table-layout: fixed;
+}
+
+#experience thead {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  font-weight: var(--fw-bold);
+}
+
+#experience tbody tr:nth-child(even) {
+  background-color: var(--clr-gray-200);
+}
+
+#experience th,
+#experience td {
+  border-bottom: 1px solid var(--clr-gray-200);
+  padding: var(--space-sm);
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
+
+#contact form fieldset {
+  border: 1px solid var(--clr-gray-400);
+  margin: 0;
+  padding: var(--space-md);
+}
+
+#contact select,
+#contact input,
+#contact textarea {
+  margin-top: var(--space-xs);
+  padding: var(--space-sm);
+  border: 1px solid var(--clr-gray-400);
+  border-radius: var(--space-sm);
+}
+
+#contact select,
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  display: block;
+  width: 100%;
+}
+
+#contact textarea {
+  resize: vertical;
+}
+
+#contact .preferences {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+#contact select:focus,
+#contact input:focus,
+#contact textarea:focus {
+  border-color: transparent;
+  outline: 2px solid var(--clr-primary);
+}
+
+#contact form button {
+  align-self: flex-end;
 }
 
 @media (min-width: 768px) {
